@@ -18,7 +18,8 @@ class Particle
     mySpeed = (Math.random()*10);
     myX = 200;
     myY = 200;
-    myC = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+    myC = color((int)(Math.random()*200), -33+(int)(Math.random()*100), 10+(int)(Math.random()*250));
+    // myC = color(32+(int)(Math.random()*50), -33+(int)(Math.random()*50), 210+(int)(Math.random()*50));
   }
   void show()
   {
@@ -33,7 +34,9 @@ class Particle
 
 
 void draw() {
-  background(0);
+  //background(0);
+  fill(0,0,0,15);
+  rect(0,0,400,400);
   for (int i = 0; i < part.length; i++) {
     part[i].move();
     part[i].show();
@@ -46,7 +49,6 @@ class OddballParticle extends Particle
     mySpeed = (Math.random()*10);
     myX = 200;
     myY = 200;
-    myC = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   }
   void show()
   {

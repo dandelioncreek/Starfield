@@ -74,3 +74,13 @@ void star(float x, float y, float radius1, float radius2, int npoints) {
   }
   endShape(CLOSE);
 }
+void mousePressed(){
+  size(400, 400);
+  noStroke();
+  for (int i = 0; i < part.length; i++) {
+    part[i] = new Particle();
+  }
+  for (int j = 0; j < 10; j++) {
+    part[j] = new OddballParticle();
+  }
+}
